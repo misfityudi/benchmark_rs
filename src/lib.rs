@@ -1,18 +1,5 @@
-#[derive(Debug, PartialEq)]
-pub enum Operation {
-    Insert,
-    Lookup,
-    Delete,
-}
-
-#[derive(Debug, PartialEq)]
-pub enum Collection {
-    Vector,
-    HashMap,
-    HashSet,
-    BTreeMap,
-    BTreeSet,
-}
+mod definitions;
+use definitions::{Collection, Operation};
 
 pub struct Target {
     pub operation: Operation,
@@ -21,7 +8,11 @@ pub struct Target {
 }
 
 impl Target {
-    pub fn new(operation: Option<Operation>, collection: Option<Collection>, num_of_items: Option<i32>) -> Self {
+    pub fn new(
+        operation: Option<Operation>,
+        collection: Option<Collection>,
+        num_of_items: Option<i32>,
+    ) -> Self {
         Self {
             operation: operation.unwrap_or(Operation::Insert),
             collection: collection.unwrap_or(Collection::Vector),
@@ -44,7 +35,11 @@ mod test {
 
     #[test]
     fn custom_benchmark() {
-        let target = Target::new(Some(Operation::Lookup), Some(Collection::HashMap), Some(1_000));
+        let target = Target::new(
+            Some(Operation::Lookup),
+            Some(Collection::HashMap),
+            Some(1_000),
+        );
         assert_eq!(target.operation, Operation::Lookup);
         assert_eq!(target.collection, Collection::HashMap);
         assert_eq!(target.num_of_items, 1_000);
