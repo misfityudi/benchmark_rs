@@ -7,7 +7,7 @@ pub enum Operation {
 
 #[derive(Debug, PartialEq)]
 pub enum Collection {
-    Vector,
+    Vec,
     HashMap,
     HashSet,
     BTreeMap,
