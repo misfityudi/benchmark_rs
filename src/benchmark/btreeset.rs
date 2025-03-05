@@ -22,7 +22,10 @@ impl BTreeSetBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to insert {} items into BTreeSet: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to insert {} items into BTreeSet: {:?}",
+            self.num_of_items, duration
+        );
     }
 
     pub fn benchmark_lookup(&self) {
@@ -33,7 +36,10 @@ impl BTreeSetBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to lookup {} items in BTreeSet: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to lookup {} items in BTreeSet: {:?}",
+            self.num_of_items, duration
+        );
     }
 
     pub fn benchmark_delete(&mut self) {
@@ -44,7 +50,10 @@ impl BTreeSetBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to delete {} items from BTreeSet: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to delete {} items from BTreeSet: {:?}",
+            self.num_of_items, duration
+        );
     }
 }
 

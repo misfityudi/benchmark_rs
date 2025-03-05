@@ -21,7 +21,10 @@ impl VecBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to insert {} items into Vec: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to insert {} items into Vec: {:?}",
+            self.num_of_items, duration
+        );
     }
 
     pub fn benchmark_lookup(&self) {
@@ -32,7 +35,10 @@ impl VecBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to lookup {} items in Vec: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to lookup {} items in Vec: {:?}",
+            self.num_of_items, duration
+        );
     }
 
     pub fn benchmark_delete(&mut self) {
@@ -43,7 +49,10 @@ impl VecBenchmark {
         }
 
         let duration = start.elapsed();
-        println!("Time taken to delete {} items from Vec: {:?}", self.num_of_items, duration);
+        println!(
+            "Time taken to delete {} items from Vec: {:?}",
+            self.num_of_items, duration
+        );
     }
 }
 

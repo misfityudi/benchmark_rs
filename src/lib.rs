@@ -24,8 +24,78 @@ impl Target {
 
     pub fn benchmark(&self) {
         match (&self.collection, &self.operation) {
-            (Collection::Vec, Operation::Insert) => println!("blah blah"),
-            _ => println!("b"),
+            (Collection::Vec, Operation::Insert) => {
+                let mut vec_benchmark = benchmark::vec::VecBenchmark::new(self.num_of_items);
+                vec_benchmark.benchmark_insert();
+            }
+            (Collection::Vec, Operation::Lookup) => {
+                let vec_benchmark = benchmark::vec::VecBenchmark::new(self.num_of_items);
+                vec_benchmark.benchmark_lookup();
+            }
+            (Collection::Vec, Operation::Delete) => {
+                let mut vec_benchmark = benchmark::vec::VecBenchmark::new(self.num_of_items);
+                vec_benchmark.benchmark_delete();
+            }
+            (Collection::BTreeMap, Operation::Insert) => {
+                let mut btreemap_benchmark =
+                    benchmark::btreemap::BTreeMapBenchmark::new(self.num_of_items);
+                btreemap_benchmark.benchmark_insert();
+            }
+            (Collection::BTreeMap, Operation::Lookup) => {
+                let btreemap_benchmark =
+                    benchmark::btreemap::BTreeMapBenchmark::new(self.num_of_items);
+                btreemap_benchmark.benchmark_lookup();
+            }
+            (Collection::BTreeMap, Operation::Delete) => {
+                let mut btreemap_benchmark =
+                    benchmark::btreemap::BTreeMapBenchmark::new(self.num_of_items);
+                btreemap_benchmark.benchmark_delete();
+            }
+            (Collection::HashMap, Operation::Insert) => {
+                let mut hashmap_benchmark =
+                    benchmark::hashmap::HashMapBenchmark::new(self.num_of_items);
+                hashmap_benchmark.benchmark_insert();
+            }
+            (Collection::HashMap, Operation::Lookup) => {
+                let hashmap_benchmark =
+                    benchmark::hashmap::HashMapBenchmark::new(self.num_of_items);
+                hashmap_benchmark.benchmark_lookup();
+            }
+            (Collection::HashMap, Operation::Delete) => {
+                let mut hashmap_benchmark =
+                    benchmark::hashmap::HashMapBenchmark::new(self.num_of_items);
+                hashmap_benchmark.benchmark_delete();
+            }
+            (Collection::BTreeSet, Operation::Insert) => {
+                let mut btreeset_benchmark =
+                    benchmark::btreeset::BTreeSetBenchmark::new(self.num_of_items);
+                btreeset_benchmark.benchmark_insert();
+            }
+            (Collection::BTreeSet, Operation::Lookup) => {
+                let btreeset_benchmark =
+                    benchmark::btreeset::BTreeSetBenchmark::new(self.num_of_items);
+                btreeset_benchmark.benchmark_lookup();
+            }
+            (Collection::BTreeSet, Operation::Delete) => {
+                let mut btreeset_benchmark =
+                    benchmark::btreeset::BTreeSetBenchmark::new(self.num_of_items);
+                btreeset_benchmark.benchmark_delete();
+            }
+            (Collection::HashSet, Operation::Insert) => {
+                let mut hashset_benchmark =
+                    benchmark::hashset::HashSetBenchmark::new(self.num_of_items);
+                hashset_benchmark.benchmark_insert();
+            }
+            (Collection::HashSet, Operation::Lookup) => {
+                let hashset_benchmark =
+                    benchmark::hashset::HashSetBenchmark::new(self.num_of_items);
+                hashset_benchmark.benchmark_lookup();
+            }
+            (Collection::HashSet, Operation::Delete) => {
+                let mut hashset_benchmark =
+                    benchmark::hashset::HashSetBenchmark::new(self.num_of_items);
+                hashset_benchmark.benchmark_delete();
+            }
         }
     }
 }
