@@ -23,7 +23,10 @@ impl Target {
     }
 
     pub fn benchmark(&self) {
-        println!("{:?}", self);
+        match (&self.collection, &self.operation) {
+            (Collection::Vec, Operation::Insert) => println!("blah blah"),
+            _ => println!("b"),
+        }
     }
 }
 
