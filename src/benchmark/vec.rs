@@ -22,7 +22,7 @@ impl VecBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to insert {} items into Vec: {:?}",
+            "| Collection | Vec       |\n| Operation  | Insert    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }
@@ -36,7 +36,7 @@ impl VecBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to lookup {} items in Vec: {:?}",
+            "| Collection | Vec       |\n| Operation  | Lookup    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }
@@ -50,7 +50,7 @@ impl VecBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to delete {} items from Vec: {:?}",
+            "| Collection | Vec       |\n| Operation  | Delete    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }

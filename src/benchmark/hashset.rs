@@ -23,7 +23,7 @@ impl HashSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to insert {} items into HashSet: {:?}",
+            "| Collection | HashSet   |\n| Operation  | Insert    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }
@@ -37,7 +37,7 @@ impl HashSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to lookup {} items in HashSet: {:?}",
+            "| Collection | HashSet   |\n| Operation  | Lookup    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }
@@ -51,7 +51,7 @@ impl HashSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "Time taken to delete {} items from HashSet: {:?}",
+            "| Collection | HashSet   |\n| Operation  | Delete    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
             self.num_of_items, duration
         );
     }
