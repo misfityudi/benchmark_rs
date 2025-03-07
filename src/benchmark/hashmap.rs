@@ -23,7 +23,7 @@ impl HashMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | HashMap   |\n| Operation  | Insert    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| HashMap        | Insert    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }
@@ -37,7 +37,7 @@ impl HashMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | HashMap   |\n| Operation  | Lookup    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| HashMap        | Lookup    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }
@@ -51,7 +51,7 @@ impl HashMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | HashMap   |\n| Operation  | Delete    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| HashMap        | Delete    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }

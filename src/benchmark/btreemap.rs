@@ -23,7 +23,7 @@ impl BTreeMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | BTreeMap   |\n| Operation  | Insert    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeMap        | Insert    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }
@@ -37,7 +37,7 @@ impl BTreeMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | BTreeMap  |\n| Operation  | Lookup    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeMap        | Lookup    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }
@@ -51,7 +51,7 @@ impl BTreeMapBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | BTreeMap   |\n| Operation  | Delete    |\n| Num of Items | {}       |\n| Time Taken | {:?}      |",
+            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeMap        | Delete    | {}           | {:?}       |",
             self.num_of_items, duration
         );
     }
