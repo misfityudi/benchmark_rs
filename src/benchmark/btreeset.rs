@@ -23,7 +23,7 @@ impl BTreeSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet        | Insert    | {}           | {:?}       |",
+            "\n| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet   | Insert    | {}       | {:.4?}  |\n",
             self.num_of_items, duration
         );
     }
@@ -37,7 +37,7 @@ impl BTreeSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet        | Lookup    | {}           | {:?}       |",
+            "\n| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet   | Lookup    | {}       | {:.4?}   |\n",
             self.num_of_items, duration
         );
     }
@@ -51,7 +51,7 @@ impl BTreeSetBenchmark {
 
         let duration = start.elapsed();
         println!(
-            "| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet        | Delete    | {}           | {:?}       |",
+            "\n| Collection | Operation | Num of Items | Time Taken |\n|------------|-----------|--------------|------------|\n| BTreeSet   | Delete    | {}       | {:.4?}   |\n",
             self.num_of_items, duration
         );
     }
