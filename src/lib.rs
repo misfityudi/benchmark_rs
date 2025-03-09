@@ -29,7 +29,7 @@ impl Target {
                 vec_benchmark.benchmark_insert();
             }
             (Collection::Vec, Operation::Lookup) => {
-                let vec_benchmark = benchmark::vec::VecBenchmark::new(self.num_of_items);
+                let mut vec_benchmark = benchmark::vec::VecBenchmark::new(self.num_of_items);
                 vec_benchmark.benchmark_lookup();
             }
             (Collection::Vec, Operation::Delete) => {

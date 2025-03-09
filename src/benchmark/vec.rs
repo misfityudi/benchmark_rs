@@ -27,7 +27,13 @@ impl VecBenchmark {
         );
     }
 
-    pub fn benchmark_lookup(&self) {
+    pub fn benchmark_lookup(&mut self) {
+        if self.vec.is_empty() {
+            for i in 0..self.num_of_items {
+                self.vec.push(i);
+            }
+        }
+
         let start = Instant::now();
 
         for i in 0..self.num_of_items {
@@ -42,6 +48,12 @@ impl VecBenchmark {
     }
 
     pub fn benchmark_delete(&mut self) {
+        if self.vec.is_empty() {
+            for i in 0..self.num_of_items {
+                self.vec.push(i);
+            }
+        }
+
         let start = Instant::now();
 
         for _ in 0..self.num_of_items {
