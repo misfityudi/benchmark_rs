@@ -62,7 +62,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_benchmark_btreemap() {
+    fn test_benchmark_hashmap() {
         let mut benchmark = HashMapBenchmark::new(1_000);
         benchmark.benchmark_insert();
         benchmark.benchmark_lookup();
