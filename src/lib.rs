@@ -143,4 +143,22 @@ mod test {
         assert_eq!(target.collection, Collection::HashMap);
         assert_eq!(target.num_of_items, 1_000);
     }
+
+    #[test]
+    fn test_operation() {
+        assert_eq!(operation("insert".to_string()), Operation::Insert);
+        assert_eq!(operation("lookup".to_string()), Operation::Lookup);
+        assert_eq!(operation("delete".to_string()), Operation::Delete);
+        assert_eq!(operation("unknown".to_string()), Operation::Insert); // Default case
+    }
+
+    #[test]
+    fn test_collection() {
+        assert_eq!(collection("vec".to_string()), Collection::Vec);
+        assert_eq!(collection("hashmap".to_string()), Collection::HashMap);
+        assert_eq!(collection("hashset".to_string()), Collection::HashSet);
+        assert_eq!(collection("btreemap".to_string()), Collection::BTreeMap);
+        assert_eq!(collection("btreeset".to_string()), Collection::BTreeSet);
+        assert_eq!(collection("unknown".to_string()), Collection::Vec); // Default case
+    }
 }
